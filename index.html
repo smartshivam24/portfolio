@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My First Project</title>
+  <link rel="icon" href="wep.png.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+  <header>
+    <header class="navbar">
+      <div class="brand">Om Prakash Vishwakarma</div>
+      <!-- Menu button for small screens -->
+      <button class="menu-btn" aria-expanded="false" aria-label="Menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <!-- Navigation links (optional) -->
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="Certificate.html">Certificates</a>
+        <a href="#">Projects</a>
+        <a href="#">Contact</a>
+      </nav>
+    </header>
+    <!------------ JavaScript use ho rha hai ------------>
+    <script>
+      // Toggle menu on small screens
+      const btn = document.querySelector('.menu-btn');
+      const nav = document.querySelector('.nav-links');
+      btn.addEventListener('click', () => {
+        const open = nav.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      // Optional: Close menu when resizing to desktop
+      window.addEventListener('resize', () => {
+        if (window.innerWidth >= 768) {
+          nav.classList.remove('open');
+          btn.setAttribute('aria-expanded', 'false');
+        }
+      });
+    </script>
+    <!--------- javascript end---------->
+    <main>
+      <section class="my">
+        <div class="my-img">
+          <img src="op img.jpg" alt=" my profile">
+        </div>
+      </section>
+    </main>
+
+    <div class="container">
+      <section id="about" class="section">
+        <!-- <h2>Hi I'm </h2> -->          
+        <!-- <h2 style="color:skyblue;">Om Prakash</h2> -->
+        <p><h2 style="color: rgb(7, 165, 227);">Hii, I'am Om Prakash</h2>BCA 2nd year student is building his future one line of code at a time. In his
+          Fourth semester,he's masterting web development a journy fueled by passoin. He knows that his dedication today
+          will lead to a bright digital world tomorrow responsive websites using
+          HTML, CSS, and JavaScript.</p>
+      </section>
+
+      <section id="projects" class="section">
+        <h2 style="text-align: center;">PROJECTS</h2>
+        <div class="projects">
+          <div class="project-card">
+            <h3><a href="#"> Project 1</a></h3>
+            <img src="" alt="">
+            <p></p>
+          </div>
+          <div class="project-card">
+            <h3>Project 2</h3>
+            <img src="" alt="">
+            <p></p>
+          </div>
+        </div>
+      </section>
+    </div>
+      <footer>
+        <div class="sociaMedia">
+          <a href="  " target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.linkedin.com/in/smartshivam/" target="main"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.instagram.com/mr__omex?igsh=b3JmODZrdDBxeGtq" target="main"><i
+              class="fab fa-instagram"></i></a>
+          <a href="http://www.youtube.com/@sankii_0007" target="main"><i class="fab fa-youtube"></i></a>
+          <a href="mailto:omprakashvishwakarma9696@gmail.com" target="main"> <i class="fab fa-google"></i></a>
+        </div>
+        &copy; 2025 SHIVAM VISHWAKARMA. All right reserved.
+      </footer>
+</body>
+
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shivam Portfolio</title>
+    <link rel="icon" href="wep.png.png">
+    <link rel="stylesheet" href="Certificate.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin=" anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="brand">Om Prakash Vishwakarma</div>
+        <!-- Menu button for small screens -->
+        <button class="menu-btn" aria-expanded="false" aria-label="Menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <!-- Navigation links (optional) -->
+        <nav class="nav-links" aria-label="Primary">
+            <a href="index.html">Home</a>
+            <a href="Certificate.html">Certificates</a>
+            <a href="#">Projects</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+    <h2 style="text-align: center; color: white; padding-top: 80px;
+     letter-spacing: 2px;font-weight: 750;">CERTIFICATES</h2>
+    <div class="outer-container">
+        <div class="card">
+
+            <div class="certificate-box">
+                <img src="PHOTO/7.png" alt="Certificate">
+            </div>
+            <h2>Microsoft </h2>
+            <p>Issued By <span> SimpliLearn Skillup</span></p>
+            <button><a href="Certificate/Certificate  (7).pdf" target="main">View
+                    Certificate</a></button>
+        </div>
+        <div class="card">
+            <div class="certificate-box">
+                <img src="PHOTO/8.png" alt="Certificate">
+            </div>
+            <h2>Google Cloud</h2>
+            <p>Issued By <span>SimpliLearn Skillup</span></p>
+            <button><a href="Certificate/Certificate  (8).pdf" target="main">View
+                    Certificate</a></button>
+        </div>
+        <div class="card">
+            <div class="certificate-box">
+                <img src="PHOTO/9.png" alt="Certificate">
+            </div>
+            <h2>Microsoft</h2>
+            <p>Issued By <span>SimpliLearn Skillup</span></p>
+            <button><a href="Certificate/Certificate  (9).pdf" target="main">View
+                    Certificate</a></button>
+        </div>
+        <div class="card">
+            <div class="certificate-box">
+                <img src="PHOTO/4.png" alt="Certificate">
+            </div>
+            <h2>IBM SkillsBuild</h2>
+            <p>Issued By <span>IBM Skills</span></p>
+            <button><a href="Certificate/Certificate  (4).pdf" target="main">View
+                    Certificate</a></button>
+        </div>
+        <div class="card">
+            <div class="certificate-box">
+                <img src="PHOTO/5.png" alt="Certificate">
+            </div>
+            <h2>IBM SkillsBuild</h2>
+            <p>Issued By <span>IBM Skills</span></p>
+            <button><a href="Certificate/Certificate  (5).pdf" target="main">View
+                    Certificate</a></button>
+        </div>
+        <div class="card">
+            <div class="certificate-box">
+                <img src="PHOTO/6.png" alt="Certificate">
+            </div>
+            <h2>IBM SkillsBuild</h2>
+            <p>Issued By <span>IBM Skills</span></p>
+            <button><a href="Certificate/Certificate  (6).pdf" target="main">View
+                    Certificate</a></button>
+        </div>
+        <div class="card">
+            <div class="certificate-box">
+                <img src="PHOTO/1.png" alt="Certificate">
+            </div>
+            <h2>IBM SkillsBuild</h2>
+            <p>Issued By <span>IBM Skills</span></p>
+            <button><a href="Certificate/Certificate  (1).pdf" target="main">View
+                    Certificate</a></button>
+        </div>
+        <div class="card">
+            <div class="certificate-box">
+                <img src="PHOTO/2.png" alt="Certificate">
+            </div>
+            <h2>IBM SkillsBuild</h2>
+            <p>Issued By <span>IBM Skills</span></p>
+            <button><a href="Certificate/Certificate  (2).pdf" target="main">View
+                    Certificate</a></button>
+        </div>
+        <div class="card">
+            <div class="certificate-box">
+                <img src="PHOTO/3.png" alt="Certificate">
+            </div>
+            <h2>IBM SkillsBuild</h2>
+            <p>Issued By <span>IBM Skills</span></p>
+            <button><a href="Certificate/Certificate  (3).pdf" target="main">View
+                    Certificate</a></button>
+        </div>
+    </div>
+    <!------------ JavaScript use ho rha hai ------------>
+    <script>
+        // Toggle menu on small screens
+        const btn = document.querySelector('.menu-btn');
+        const nav = document.querySelector('.nav-links');
+        btn.addEventListener('click', () => {
+            const open = nav.classList.toggle('open');
+            btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+        // Optional: Close menu when resizing to desktop
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 768) {
+                nav.classList.remove('open');
+                btn.setAttribute('aria-expanded', 'false');
+            }
+        });
+    </script>
+
+
+
+    <footer>
+        <div class="sociaMedia">
+            <a href="https://www.facebook.com/swifft.shivam07" target="main"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.linkedin.com/in/smartshivam/" target="main"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/mr__omex?igsh=b3JmODZrdDBxeGtq" target="main"><i
+                    class="fab fa-instagram"></i></a>
+            <a href="http://www.youtube.com/@sankii_0007" target="main"><i class="fab fa-youtube"></i></a>
+            <a href="mailto:omprakashvishwakarma9696@gmail.com" target="main"> <i class="fab fa-google"></i></a>
+        </div>
+        &copy; 2025 SHIVAM VISHWAKARMA. All right reserved.
+    </footer>
+</body>
+
+</html>
