@@ -1,22 +1,18 @@
- /* Basic reset */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-
 body {
-
     width: 100%;
     min-height: 100vh;
     position: relative;
-    padding-bottom: 80px;
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    padding-bottom: 100px;
+    font-family: system-ui, sans-serif;
     background: linear-gradient(90deg, #0f172a, #0b3b5a);
+    overflow-x: hidden;
 }
-
-/* Navbar */
 .navbar {
     display: flex;
     align-items: center;
@@ -33,6 +29,7 @@ body {
     border-bottom: 1px solid skyblue;
 }
 
+
 /* Left brand (Om Prakash) */
 .brand {
     font-weight: 700;
@@ -41,12 +38,14 @@ body {
     margin-left: 70px;
 }
 
+
 /* Nav links (desktop) */
 .nav-links {
     display: flex;
     gap: 1rem;
     align-items: center;
 }
+
 
 .nav-links a {
     color: #e6eef8;
@@ -57,11 +56,13 @@ body {
     transition: background .18s ease, transform .08s ease;
 }
 
+
 .nav-links a:hover,
 .nav-links a:focus {
     background: rgba(255, 255, 255, 0.06);
     transform: translateY(-1px);
 }
+
 
 /* Menu button (hamburger) hidden on desktop */
 .menu-btn {
@@ -73,9 +74,11 @@ body {
     border-radius: 6px;
 }
 
+
 .menu-btn:focus {
     outline: 2px solid rgba(255, 255, 255, 0.12);
 }
+
 
 /* Hamburger bars */
 .menu-btn .bar {
@@ -87,11 +90,14 @@ body {
     border-radius: 2px;
 }
 
+
 /* ========== Responsive rules ========== */
 @media (max-width: 992px) {
     .navbar {
         height: 100px;
     }
+
+
     .brand {
         font-weight: 700;
         font-size: 25px;
@@ -99,15 +105,14 @@ body {
         margin-left: 20px;
     }
 
-    /* Show menu button on small screens */
 
+    /* Show menu button on small screens */
     .menu-btn {
         display: flex !important;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: 1px;
-        /* OPTIONAL: distance between lines */
     }
 
 
@@ -130,125 +135,127 @@ body {
         transition: transform .18s ease, opacity .18s ease;
     }
 
+
     .nav-links.open {
         transform: scaleY(1);
         opacity: 1;
         pointer-events: auto;
     }
 
+
     .nav-links a {
         padding: 0.6rem 0.9rem;
         width: 100%;
     }
 }
+.certificates-title {
+    text-align: center;
+    color: white;
+    margin-top: 40px;
+    font-size: 2.5rem;
+}
+
 
 .outer-container {
-    padding: 20px;
-    max-width: 1200px;
-    margin: 50px auto 50px auto;
+    padding: 40px 20px;
+    max-width: 1300px;
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 50px;
-    text-align: center;
+    gap: 40px;
 }
 
 .card {
     background: linear-gradient(180deg, #0e1633, #070b1c);
-    border-radius: 10px;
-    padding: 20px;
+    border-radius: 15px;
+    padding: 25px;
     width: 320px;
     text-align: center;
-    box-shadow: 0 0 10px skyblue;
-    width: calc(33.33% -35px); 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+    border: 1px solid rgba(135, 206, 235, 0.1);
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+                box-shadow 0.5s ease, 
+                border-color 0.5s ease;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
 }
+
 .card:hover {
-    transform: scale(1.03);
-    box-shadow: 0 0 15px skyblue;
-    transition: all 0.3s ;
+    transform: translateY(-15px) scale(1.03);
+    box-shadow: 0 20px 40px rgba(135, 206, 235, 0.3);
+    border-color: skyblue;
 }
 
 .certificate-box {
     background: #fff;
-    border-radius: 15px;
-    padding: 10px;
+    border-radius: 10px;
+    padding: 8px;
     margin-bottom: 20px;
+    overflow: hidden;
 }
 
 .certificate-box img {
     width: 100%;
-    /* border-radius: 15px;  */
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.card:hover .certificate-box img {
+    transform: scale(1.05);
 }
 
 .card h2 {
-    color: #ffffff;
-    margin-bottom: 8px;
+    color: #fff;
+    margin-bottom: 10px;
+    font-size: 1.4rem;
 }
 
 .card p {
     color: #bfc6ff;
-    margin-bottom: 20px;
-    font-size: 14px;
+    margin-bottom: 25px;
+    font-size: 0.9rem;
 }
 
 .card p span {
-    color: #ffffff;
-    font-weight: bold;
-}
-
-.card button {
-    background: linear-gradient(90deg, #2bb3e6, #1c8fd6);
-    border: none;
-    color: #fff;
-    padding: 14px 25px;
-    font-size: 16px;
-    border-radius: 10px;
-    cursor: pointer;
-    width: 100%;
-    text-decoration: none;
-    
-}
-.card button a{
-    color: white;
-    text-decoration: none;
-    display: block;
-    font-weight: bold;
-}
-
-.card button:hover {
-    opacity: 0.9;
-    transform: scale(1.03);
-    box-shadow: 0 0 5px skyblue;
-}
-
-footer {
-    background-color: rgb(63, 63, 63);
     color: skyblue;
-    text-align: center;
-    padding: 10px;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
+    font-weight: bold;
 }
 
-/* ---------- SOCIAL MEDIA ---------- */
-.sociaMedia {
-    display: flex;
-    justify-content: center;
-}
-
-.sociaMedia a {
+.view-btn {
+    display: block;
+    background: linear-gradient(90deg, #2bb3e6, #1c8fd6);
+    color: white !important;
     text-decoration: none;
-    padding: 5px;
-    background-color: white;
-    margin: 10px;
-    border-radius: 50%;
-    cursor: pointer;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 400;
+    transition: all 0.3s ease;
 }
 
-.sociaMedia a i {
-    font-size: 1em;
-    color: black;
-    opacity: 0.9;
+.view-btn:hover {
+    filter: brightness(1.2);
+    box-shadow: 0 0 15px skyblue;
 }
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.2s; }
+.card:nth-child(3) { animation-delay: 0.3s; }
+.card:nth-child(4) { animation-delay: 0.4s; }
+.card:nth-child(5) { animation-delay: 0.5s; }
+.card:nth-child(6) { animation-delay: 0.6s; }
+.card:nth-child(7) { animation-delay: 0.7s; }
+.card:nth-child(8) { animation-delay: 0.8s; }
+.card:nth-child(9) { animation-delay: 0.9s; }
+
