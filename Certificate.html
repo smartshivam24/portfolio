@@ -9,35 +9,6 @@
     <link rel="stylesheet" href="Certificate.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-        fetch('footer.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('footer-placeholder').innerHTML = data;
-
-                const currentPath = window.location.pathname.split("/").pop() || "index.html";
-                const footerLinks = document.querySelectorAll('.link-btn');
-
-                footerLinks.forEach(link => {
-                    const linkHref = link.getAttribute('href');
-
-                    if (linkHref === currentPath) {
-                        link.classList.add('active');
-                        // Certificates page ke liye blue glow aur Home ke liye yellow
-                        if (currentPath === "Certificate.html") {
-                            link.style.boxShadow = "0 0 15px #00ccff";
-                            link.style.backgroundColor = "#00ccff";
-                            link.style.borderColor = "#00ccff";
-                        }
-                    } else {
-                        link.classList.remove('active');
-                    }
-                });
-            });
-    });
-</script>
-
 <body>
     <header class="navbar">
         <div class="brand">Om Prakash Vishwakarma</div>
@@ -53,20 +24,6 @@
             <a href="#">Contact</a>
         </nav>
     </header>
-    <script>
-        const btn = document.querySelector('.menu-btn');
-        const nav = document.querySelector('.nav-links');
-        btn.addEventListener('click', () => {
-            const open = nav.classList.toggle('open');
-            btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-        });
-        window.addEventListener('resize', () => {
-            if (window.innerWidth >= 768) {
-                nav.classList.remove('open');
-                btn.setAttribute('aria-expanded', 'false');
-            }
-        });
-    </script>
 
     <h2 class="certificates-title">
         CERTIFICATES</h2>
@@ -154,6 +111,8 @@
         </div>
     </div>
     <div id="footer-placeholder"></div>
+    <script src="footer.js"></script>
 </body>
 
 </html>
+
