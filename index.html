@@ -56,40 +56,7 @@
       <a href="#">Contact</a>
     </nav>
   </header>
-
-
-  <script>
-    const btn = document.querySelector('.menu-btn');
-    const nav = document.querySelector('.nav-links');
-    btn.addEventListener('click', () => {
-      const open = nav.classList.toggle('open');
-      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-    });
-    window.addEventListener('resize', () => {
-      if (window.innerWidth >= 768) {
-        nav.classList.remove('open');
-        btn.setAttribute('aria-expanded', 'false');
-      }
-    });
-
-    // --- Image Up-Down Animation JS (Fix) ---
-    document.addEventListener("DOMContentLoaded", () => {
-      const profileImg = document.querySelector('.my-img img');
-
-      if (profileImg) {
-        profileImg.animate([
-          { transform: 'translateY(0px)' },
-          { transform: 'translateY(-20px)' },
-          { transform: 'translateY(0px)' }
-        ], {
-          duration: 3000,
-          iterations: Infinity,
-          easing: 'ease-in-out'
-        });
-      }
-    });
-  </script>
-
+<!--  Profile Photos -->
   <main>
     <section class="my">
       <div class="my-img">
@@ -130,8 +97,10 @@
   <!-- <-----------------footer----------------->
 
   <div id="footer-placeholder"></div>
+  <script src="footer.js"></script>
 </body>
 
 </html>
+
 
 
