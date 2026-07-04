@@ -7,11 +7,16 @@
 body {
     width: 100%;
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-    background: linear-gradient(90deg, #0f172a, #0b3b5a);
+    background: linear-gradient(90deg, #293c67, #062539);
     min-height: 100vh;
-    position: relative;
-    padding-bottom: 100px;
     overflow-x: hidden;
+
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
 }
 
 /* ---------- NAVBAR ---------- */
@@ -19,38 +24,39 @@ body {
     display: flex;
     align-items: center;
     width: 100%;
+    height: 80px;
     justify-content: space-between;
-    padding: 0.65rem 1rem;
+    padding: 0.65rem 2rem;
     background: linear-gradient(90deg, #0f172a, #0b3b5a);
     color: #fff;
     position: sticky;
-    top: 0;
     z-index: 20;
     box-shadow: 0 0 15px skyblue;
     border-bottom: 1px solid skyblue;
 }
 
 .brand {
-    font-weight: 700;
-    font-size: 45px;
+    font-weight: 500;
+    font-size: 35px;
     letter-spacing: 1px;
-    margin-left: 70px;
+    margin-left: 50px;
 }
 
 .nav-links {
     display: flex;
-    gap: 1rem;
+    gap: 10px;
     align-items: center;
 }
 
 .nav-links a {
     color: #e6eef8;
     text-decoration: none;
-    padding: 0.45rem 0.6rem;
+    padding: 15px;
     border-radius: 6px;
-    font-size: 0.98rem;
+    font-size: 1.1rem;
     transition: all .18s ease;
-    font-weight: 500;
+    font-weight: 450;
+    letter-spacing: 1px;
 }
 
 .nav-links a:hover {
@@ -58,30 +64,24 @@ body {
     transform: translateY(-1px);
 }
 
-.menu-btn {
-    display: none;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-}
-
-.menu-btn .bar {
-    display: block;
-    width: 22px;
-    height: 2px;
-    margin: 4px 0;
-    background: #fff;
-    border-radius: 2px;
-}
 
 /* ---------- HERO SECTION ---------- */
 .my {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 100px;
+    gap: 50px;
     padding: 100px 10%;
+    min-height: calc(100vh - 80px);
     color: white;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.my-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
 }
 
 .my-img img {
@@ -90,97 +90,158 @@ body {
     object-fit: cover;
     border-radius: 50%;
     border: 2px solid skyblue;
+    
 }
 
 .about-text {
-    max-width: 500px;
+    flex: 1;
+    max-width: 700px;
+    
 }
 
 .about-text h2 {
-    font-size: 2.5rem;
+    font-size: 2.17rem;
     color: skyblue;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .about-text p {
-    font-size: 1.2rem;
-    line-height: 1.5;
+    font-size: 1.27rem;
+    line-height: 1.8;
     color: #e6eef8;
+    letter-spacing: 1.1px;
 }
 
 /* ---------- BUTTONS ---------- */
 .hero-buttons {
-    margin-top: 25px;
+    margin-top: 30px;
     display: flex;
     gap: 20px;
 }
 
 .btn {
     text-decoration: none;
-    padding: 10px 25px;
+    padding: 10px 20px;
     border-radius: 25px;
     font-weight: 600;
     border: 3px solid skyblue;
     transition: 0.3s ease;
 }
 
-.btn-primary { background: skyblue; color: #0f172a; }
-.btn-outline { color: skyblue; background: transparent; }
-
-/* ---------- PROJECTS ---------- */
-.container {
-    padding: 20px;
-    max-width: 800px; /* Original size */
-    margin: 100px auto 80px auto;
-    text-align: center;
-    color: white;
+.btn-primary {
+    background: skyblue;
+    color: #030a1c;
 }
 
-.projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 120px; /* Original gap */
-    margin-top: 40px;
+.btn-outline {
+    color: skyblue;
+    background: transparent;
+}
+.menu-btn{
+    display: none;
 }
 
-.project-card {
-    height: 250px; /* Original height */
-    width: 400px;  /* Original width */
-    color: white;
-    padding: 40px;
-    border-radius: 10px;
-    border: 1px solid skyblue;
-    box-shadow: 0 0 10px skyblue;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.project-card:hover {
-    transform: scale(1.03);
-    box-shadow: 0 0 25px skyblue;
-}
-
-.project-card img {
-    width: 100%;
-    object-fit: cover;
-}
 
 /* ---------- RESPONSIVE ---------- */
-@media (max-width: 992px) {
-    .brand { font-size: 25px; margin-left: 20px; }
-    .menu-btn { display: flex; flex-direction: column; }
-    .nav-links {
-        display: none;
-        position: absolute;
-        top: 100%; left: 0; right: 0;
-        background: #0f172a;
-        flex-direction: column;
-        padding: 20px;
+
+@media (max-width:992px) {
+
+    .navbar {
+        position: relative;
+        padding: 15px 20px;
     }
-    .nav-links.open { display: flex; }
-    .my { flex-direction: column; text-align: center; gap: 40px; }
+
+    .brand {
+        margin-left: 0;
+        font-size: 24px;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        border-radius: 0 0 20px 20px;
+        background: rgba(15, 23, 42, 0.98);
+        backdrop-filter: blur(12px);
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+
+        overflow: hidden;
+        max-height: 0;
+        opacity: 0;
+        transform: translateY(-15px);
+
+        transition:
+            max-height .45s ease,
+            opacity .35s ease,
+            transform .35s ease,
+            padding .35s ease;
+
+        padding: 0;
+        border-top: 1px solid rgba(135, 206, 235, .3);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, .35);
+        z-index: 999;
+    }
+
+    .nav-links.active {
+        max-height: 350px;
+        opacity: 1;
+        transform: translateY(0);
+        padding: 25px 0;
+    }
+
+    .nav-links a {
+        width: 90%;
+        text-align: center;
+        padding: 12px;
+        border-radius: 10px;
+        transition: .3s;
+    }
+
+    .nav-links a:hover {
+        background: rgba(135, 206, 235, .15);
+        color: skyblue;
+    }
+
+    .my {
+        flex-direction: column;
+        text-align: center;
+        gap: 50px;
+        padding: 60px 20px;
+        min-height: auto;
+    }
+
+    .my-img img {
+        width: 260px;
+        height: 260px;
+    }
+
+    .about-text {
+        max-width: 100%;
+    }
+
+    .about-text h2 {
+        font-size: 1.5rem;
+        margin-bottom: 12px;
+    }
+
+    .about-text p {
+        font-size: 1rem;
+        letter-spacing: 0.1px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+        /* flex-wrap: wrap; */
+        display: flex;
     
-    .project-card {
-        width: 100%; /* Mobile par responsive rahega */
-        height: auto;
     }
 }
