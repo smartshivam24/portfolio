@@ -22,17 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     link.classList.remove('active');
                 }
             });
-        });
-
-    // Navbar Toggle logic
-    const btn = document.querySelector('.menu-btn');
-    const nav = document.querySelector('.nav-links');
-    if (btn && nav) {
-        btn.addEventListener('click', () => {
-            const open = nav.classList.toggle('open');
-            btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-        });
-    }
+        })
 
     // Window resize logic
     window.addEventListener('resize', () => {
